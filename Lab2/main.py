@@ -41,7 +41,7 @@ def decoding(text, letters):
 K = 2
 letter_numbers_shifted = initialize(K)
 
-print("Example:\n\t decoded message: matveeva\n\t encoded message: 13,1,20,22,5,5,22,1\n")
+print("Example:\n\t decoded message: matveeva\n\t encoded message: 15,3,22,24,7,7,24,3\n")
 user_input = input("Please enter surname: ")
 divider = ","
 
