@@ -15,10 +15,11 @@ def initialize(K):
 
     for i in range(26):
         letter = chr(ord('a') + i)
-        if i <= 26:
-            shifted_order[letter] = i + K + 1
-        elif i > 26:
-            shifted_order[letter] = i + K - 26 + 1
+
+        shifted_value = (i + 1 + K) % 26
+        if shifted_value == 0:
+            shifted_value = 26
+        shifted_order[letter] = shifted_value
 
     return shifted_order
 
@@ -40,6 +41,7 @@ def decoding(text, letters):
 
 K = 2
 letter_numbers_shifted = initialize(K)
+print(letter_numbers_shifted)
 
 print("Example:\n\t decoded message: matveeva\n\t encoded message: 15,3,22,24,7,7,24,3\n")
 user_input = input("Please enter surname: ")
